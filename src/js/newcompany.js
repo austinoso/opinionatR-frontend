@@ -15,7 +15,10 @@ function newCompany() {
             },
             body: JSON.stringify({
                 name: name,
-                bio: bio
+                bio: bio,
+                // from local storage
+                // was set in newUser.js
+                user_id: user
             })
         })
     })
