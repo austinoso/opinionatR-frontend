@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Company Creation</title>
+        <h1>Add a new company</h1>
+        <link rel="stylesheet" href="">
+    </head>
+    <body>
+        <section id="new-company">
+            <div>
+                <form id="create-company-form">                
+                
+                    <label for="name">Name:</label><br>
+                    <input type="text" id="name" name="name">
+                    
+                    <br><br>
+    
+                    <label for="bio">Bio:</label><br>
+                    <textarea id="bio" placeholder="Enter something about yourself"></textarea>
+                    
+                    <br><br>
+    
+                    <input
+                        type="submit"
+                        name="submit"
+                        value="Add Company"
+                        class="submit"
+                    />
+    
+                </form>
+            </div>
+        </section>
+        <section id="companies">
+        
+        </section>
+
+        <script src="./src/js/company.js" async defer></script>
+    </body>
+</html>
