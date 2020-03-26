@@ -6,15 +6,28 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title></title>
+        <title>User Signup</title>
+        
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="">
     </head>
     <body>
-        <section id="polls">
-        </section>
-        
-        <script src="./src/js/index.js" async defer></script>
+        <form id="user-form">
+            <h1>Enter a user to be identified</h1>
+
+            <label for="name">Username:</label><br>
+            <input type="text" id="name" name="name">
+                
+            <br><br>
+
+            <input
+                type="submit"
+                name="submit"
+                value="Create User"
+                class="submit"
+            />
+        </form>
+        <script src="./src/js/new-user.js" async defer></script>
     </body>
 </html>
