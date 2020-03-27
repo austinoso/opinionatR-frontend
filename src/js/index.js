@@ -41,14 +41,4 @@ function makePollBody(poll){
     return pollBody
 }
 
-
-// let config = {
-//     method: 'POST',
-//     headers: {
-//         'Content-Type': 'application/json',
-//         'Accept': 'application/json'
-//     },
-//     body: JSON.stringify({ question: 'do we do good?', company_id: 1 })
-// }
-
 renderPolls()
