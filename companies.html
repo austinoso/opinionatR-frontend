@@ -3,21 +3,34 @@
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <title>Company Creation</title>
-        <h1>Add a new company</h1>
+
+        <nav class="navbar-nav ml-auto">
+            <div>
+                <form class="form-inline">                    
+                    <input type="text" class="form-control" placeholder="Username">
+                    <button type="submit" class="btn btn-default">Enter</button>
+                </form>
+            </div>
+        </nav>
+
         <link rel="stylesheet" href="">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     </head>
     <body>
-        <section id="new-company">
+        <section id="new-company" class="container">
             <div>
+                <div class="row">
+
+                  </div>
                 <form id="create-company-form">                
-                
+                    <h1>Add a new company</h1>
                     <label for="name">Name:</label><br>
                     <input type="text" id="name" name="name">
                     
                     <br><br>
     
                     <label for="bio">Bio:</label><br>
-                    <textarea id="bio" placeholder="Enter something about yourself"></textarea>
+                    <textarea id="bio" placeholder="Enter something about the company"></textarea>
                     
                     <br><br>
     
@@ -31,10 +44,25 @@
                 </form>
             </div>
         </section>
-        <section id="companies">
-        
+        <section id="companies" class="container">
+            <div class="row">
+                <div class="col-3" id="companiesList">
+                </div>
+                <div class="col-9 card" id="showCompany">
+                  <h3 id='company-name'></h3>
+                  <p id='company-bio'></p>
+                  <form hidden id="questionForm" class='form'>
+                      <input type='textarea' name="question">
+                      <input type='submit'>
+                  </form>
+                </div>
+              </div>
         </section>
 
         <script src="./src/js/company.js" async defer></script>
+        <script src="./src/js/navbar.js"></script>
+        <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>  
     </body>
 </html>

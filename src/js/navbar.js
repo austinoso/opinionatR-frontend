@@ -1,9 +1,29 @@
+
+function logout() {
+    let btn = document.createElement("button");
+    btn.setAttribute("id", "logout");
+    let nav = document.getElementsByClassName("navbar-nav")[0];
+    btn.innerText = "logout"
+    nav.appendChild(nav);
+}
+
+function listenForLogout() {
+    const btn = document.getElementById("logout");
+    btn.addEventListener("click", () => {
+        const form = document.getElementsByClassName("form-inline")[0];
+        form.setAttribute("hidden", false);
+    })
+}
+
 function listenForUserSubmit(){
-    const form = document.getElementById("user-form") 
+    const form = document.getElementsByClassName("form-inline")[0];    
+
     form.addEventListener("submit", (event) => {
+        form.setAttribute("hidden", true);
         event.preventDefault();
         const username = event.target.name.value;        
-        loginUser(username)
+        loginUser(username)   
+        logout();     
     })
 }
 
@@ -15,8 +35,7 @@ function loginUser(name){
 
 function findUser(users, name){
     const user = users.find(user => user.username === name)
-    if (!!user){
-        debugger
+    if (!!user){        
         setUser(user)
     } else {
         newUser(user)
@@ -26,7 +45,13 @@ function findUser(users, name){
 
 function setUser(user) {
     // current user storage
-    localStorage.setItem("user", user.id)
+    localStorage.setItem("userId", user.id)
+    localStorage.setItem("userName", user.name)
+
+    const nav = document.getElementsByClassName("nav-bar")[0];
+    const p = document.createElement("p");
+    p.innerText = localStorage.userName
+    nav.append(p);
 }
 
 function newUser(user) {    
