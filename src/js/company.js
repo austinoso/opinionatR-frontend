@@ -17,7 +17,7 @@ function newCompany() {
                 bio: bio,
                 // from local storage
                 // was set in newUser.js
-                user_id: localStorage.getItem('user')
+                user_id: localStorage.getItem('userId')
             })
         })        
     })
@@ -63,6 +63,13 @@ function makeCompanyCard(companyInfo){
     cardBody.id = companyInfo.id
     cardBody.innerText = companyInfo.name
     card.appendChild(cardBody)
+    const editBtn = document.createElement("button");
+    editBtn.innerText = "Edit Company";
+    editBtn.setAttribute("id", "edit-company");
+    editBtn.dataset.id = companyInfo.id
+    //console.log(editBtn.dataset.id)
+    editBtn.className = 'btn-sm btn-secondary'
+    card.append(editBtn);
     return card
 }
 
@@ -111,6 +118,6 @@ function fetchSingleCompany(id){
 }
 
 newCompany()
-renderUserCompanies(localStorage.user)
+renderUserCompanies(localStorage.userId)
 listenForCompanyCard()
 listenForQuestionForm()

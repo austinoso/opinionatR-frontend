@@ -13,7 +13,8 @@ function fetchPolls(){
 
 function renderPoll(poll){
     const pollsElement = document.getElementById('polls')
-    pollsElement.appendChild(makePollCol(poll))
+
+    pollsElement.prepend(makePollCol(poll))
 }
 
 function makePollCol(poll){
@@ -36,8 +37,13 @@ function makePollBody(poll){
     button.className = 'btn btn-primary'
     button.innerText = "Respond"
     button.href = `./polls.html?poll=${poll.id}`
+    const cardFooter = document.createElement('footer')
+    cardFooter.innerText = poll.company.name
+    cardFooter.className = 'blockquote-footer'
     pollBody.appendChild(header)
     pollBody.appendChild(button)
+    pollBody.appendChild(cardFooter)
+
     return pollBody
 }
 

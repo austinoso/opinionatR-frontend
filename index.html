@@ -6,34 +6,51 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title></title>
-
-        <nav class="navbar-nav ml-auto">
-            <div>
-                <form class="form-inline">                
-                    <input type="text" class="form-control" placeholder="Username">
-                    <button type="submit" class="btn btn-default">Enter</button>
-                </form>
-            </div>
-        </nav>
+        <title>opinionatR</title>
 
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="">
+        <link rel="stylesheet" href="./src/css/style.css">
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     </head>
     <body>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+              <a class="navbar-brand" href="index.html">OpinionatR</a>
+              <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="companies.html">Your Companies</a>
+                </li>
+              </ul>
+              <span id="user">
+                <form id="user-signIn" class="form-inline my-2 my-lg-0">  
+                    <div class="input-group">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text" id="basic-addon1">@</span>
+                        </div>
+                        <input type="text" class="form-control mr-sm-2" name="name" placeholder="Username">
+                        <button type="submit" class="btn-sm btn-primary">Sign Up/In</button>
+                    </div>              
+                </form>
+            </span>
+            </div>
+          </nav>
+
         <div class="jumbotron">
             <h1 class="display-4">OpinionatR</h1>
             <p class="lead">Need market research? Ask a question!</p>
             <hr class="my-4">
-            <p>Create a company and ask away!</p>
-            <a class="btn btn-primary btn-lg" href="#" role="button">Create a Company</a>
+            <a class="btn btn-primary btn" href="companies.html" role="button">Ask your first Question!</a>
           </div>
 
         <section class="container">
             <div class="row" id="polls">
-
             </div>
         </section>
         

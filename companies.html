@@ -2,46 +2,67 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>Company Creation</title>
-
-        <nav class="navbar-nav ml-auto">
-            <div>
-                <form class="form-inline">                    
-                    <input type="text" class="form-control" placeholder="Username">
-                    <button type="submit" class="btn btn-default">Enter</button>
-                </form>
-            </div>
-        </nav>
-
-        <link rel="stylesheet" href="">
+        <title>opinionatR: Company Creation</title>
+        <link rel="stylesheet" href="src/css/style.css">
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     </head>
     <body>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+              <a class="navbar-brand" href="index.html">OpinionatR</a>
+              <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="companies.html">Your Companies</a>
+                </li>
+              </ul>
+              <span id="user">
+                <form id="user-signIn" class="form-inline my-2 my-lg-0">  
+                    <div class="input-group">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text" id="basic-addon1">@</span>
+                        </div>
+                        <input type="text" class="form-control mr-sm-2" name="name" placeholder="Username">
+                        <button type="submit" class="btn-sm btn-primary">Sign Up/In</button>
+                    </div>              
+                </form>
+            </span>
+            </div>
+          </nav>
+
         <section id="new-company" class="container">
             <div>
                 <div class="row">
 
                   </div>
-                <form id="create-company-form">                
+                <form id="create-company-form" class="form">
                     <h1>Add a new company</h1>
-                    <label for="name">Name:</label><br>
-                    <input type="text" id="name" name="name">
+                    <div class="form-group">
+                        <label for="name">Name:</label><br>
+                        <input type="text" id="name" name="name" class="form-control">
+                    </div>
                     
-                    <br><br>
-    
-                    <label for="bio">Bio:</label><br>
-                    <textarea id="bio" placeholder="Enter something about the company"></textarea>
                     
-                    <br><br>
+                    <div class="form-group">
+                        <label for="bio">Bio:</label><br>
+                        <textarea id="bio" placeholder="Enter something about the company" class="form-control"></textarea>
+                    </div>
+                    
     
                     <input
                         type="submit"
                         name="submit"
                         value="Add Company"
-                        class="submit"
+                        class="btn btn-primary"
                     />
     
                 </form>
+                
             </div>
         </section>
         <section id="companies" class="container">
@@ -49,18 +70,24 @@
                 <div class="col-3" id="companiesList">
                 </div>
                 <div class="col-9 card" id="showCompany">
-                  <h3 id='company-name'></h3>
-                  <p id='company-bio'></p>
-                  <form hidden id="questionForm" class='form'>
-                      <input type='textarea' name="question">
-                      <input type='submit'>
-                  </form>
+                    <h3 id='company-name'></h3>
+                    <p id='company-bio'></p>
+                    <hr>
+                    <form class="form" hidden id="questionForm" class='form'>
+                        <div class="form-group">
+                        <label for="question">Ask a question:</label>
+                        <textarea class="form-control" id="question" name="question"></textarea>
+                        </div>
+
+                        <input class="btn-sm btn-primary" type='submit'>
+                    </form>
                 </div>
               </div>
         </section>
 
         <script src="./src/js/company.js" async defer></script>
         <script src="./src/js/navbar.js"></script>
+        <script src="./src/js/company-edit.js"></script>
         <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
         <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>  
